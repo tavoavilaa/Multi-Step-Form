@@ -1,0 +1,92 @@
+.textField{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1em;
+}
+
+.inputContainer {
+  position: relative;
+  max-width: 382px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.inputContainer p{
+  margin: 8px 0;
+}
+
+.input {
+  background-color: #fdfdfd;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  font-size: 1em;
+  padding: 1em 1em;
+  transition: all 0.3s ease;
+  max-width: 382px;
+  width: 350px;
+  position: relative;
+  border: 1px solid #bebebe;
+}
+
+
+.input:focus {
+  background-color: #fff;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  outline: none;
+}
+
+
+.input::placeholder {
+  color: #bebebe;
+  font-size: .99em;
+  font-style: italic;
+}
+
+.highlight {
+  background-color: var(--primary);
+  bottom: 0;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease;
+  width: 0;
+}
+
+
+.highlightRed {
+  background-color: rgb(194, 1, 1);
+  bottom: 0;
+  height: 2px;
+  left: 0;
+  position: absolute;
+  transition: width 0.3s ease;
+  width: 0;
+}
+
+
+
+.input:focus + .highlight {
+  width: 100%;
+}
+.input:focus + .highlightRed {
+  width: 100%;
+}
+
+/* Optional: Animation on focus */
+@keyframes input-focus {
+  from {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0.1);
+  }
+
+  to {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+}
+
+.input:focus {
+  animation: input-focus 0.3s ease;
+}

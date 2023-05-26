@@ -1,0 +1,49 @@
+#root {
+  max-width: 768px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+  
+}
+
+.main-card{
+  background-color: #ffffff;
+  padding: 3em;
+  border-radius: 12px;
+  box-shadow: 2px 4px 20px -6px rgb(0 0 0 / 30%);
+  margin-top: 3em;
+}
+
+.btn-group{
+  display: flex;
+  justify-content: center;
+  gap: 2em;
+  margin-top: 3em;
+}
+
+.input-group{
+  margin-bottom: 2em;
+}
+
+.toggle-card{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  background-color: #fdfdfd;
+  border: none;
+  border-radius: 12px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text);
+  font-size: 1em;
+  transition: all 0.3s ease;
+  max-width: 382px;
+  width: 350px;
+  margin: 16px auto;
+  border: 1px solid #bebebe
+}
+
+
+
+
