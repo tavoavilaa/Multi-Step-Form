@@ -16,6 +16,12 @@
   transition: all .3s ease;
   width: 9em;
   z-index: 1;
+  color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
  }
 
  .button:active{

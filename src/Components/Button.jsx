@@ -1,20 +1,12 @@
-import React from 'react'
+import { Link } from 'react-router-dom'
 import styles from './Button.module.css';
 
-const Button = ({ handleStepChange, direction, currentStep, totalSteps }) => {
+const Button = ({ direction, destiny }) => {
 
-  const handleClick = () => {
-    if (direction === 'forward') {
-      handleStepChange(1); // Incrementar el paso
-    } else if (direction === 'backward') {
-      handleStepChange(-1); // Decrementar el paso
-    }
-  };
-  
   return (
-    <button className={styles.button} onClick={handleClick}>
+    <Link className={styles.button} to={destiny} disabled>
       {direction === 'forward' ? 'Siguiente' : 'Anterior'}
-    </button>
+    </Link>
   )
 }
 
