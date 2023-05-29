@@ -5,7 +5,6 @@ import SideNav from './SideNav'
 import Modal from './Modal'
 import Stepper from 'react-stepper-horizontal';
 import stepsData from '../data/stepsData.json';
-import '../app.css'
 import '../index.css'
 
 const Layout = () => {
