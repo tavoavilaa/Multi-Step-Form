@@ -4,7 +4,7 @@ import styles from './Button.module.css';
 const Button = ({ direction, destiny }) => {
 
   return (
-    <Link className={styles.button} to={destiny} disabled>
+    <Link className={direction == 'forward' ? styles.button : styles.buttonSecundary} to={destiny}>
       {direction === 'forward' ? 'Siguiente' : 'Anterior'}
     </Link>
   )

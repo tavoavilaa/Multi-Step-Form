@@ -24,6 +24,60 @@
   font-weight: bold;
  }
 
+.buttonSecundary {
+  background-color: #ffffff;
+  border: 2px solid var(--primary);
+  border-radius: 30em;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  height: 3em;
+  overflow: hidden;
+  position: relative;
+  transition: all .3s ease;
+  width: 9em;
+  z-index: 1;
+  color: var(--primary);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+ }
+
+.buttonModal{
+  background-color: var(--secundary);
+  border: none;
+  border-radius: 30em;
+  cursor: pointer;
+  font-family: inherit;
+  font-size: 15px;
+  height: 3em;
+  overflow: hidden;
+  position: relative;
+  transition: all .3s ease;
+  width: 7em;
+  z-index: 1;
+  color: black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  font-weight: bold;
+  position: fixed;
+  z-index: 100;
+  top: 0;
+  right: 0;
+  margin-top: 24px;
+  margin-right: 24px;
+ }
+
+ @media (min-width: 992.98px){
+  .buttonModal{
+    display: none;
+  }
+ }
+
  .button:active{
   transform: scale(1.05);
   transition: all .3s ease;
@@ -42,7 +96,24 @@
   width: 0;
   z-index: -1;
  }
+ .buttonSecundary::before {
+  background-image: linear-gradient(to right, #ffffff 0%, rgba(244, 233, 255, 0.557) 100%);
+  border-radius: 30em;
+  content: '';
+  display: block;
+  height: 3em;
+  left: 0;
+  position: absolute;
+  top: 0;
+  transition: .5s ease;
+  width: 0;
+  z-index: -1;
+ }
  
  .button:hover::before {
+  width: 9em;
+ }
+
+ .buttonSecundary:hover::before {
   width: 9em;
  }

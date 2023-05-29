@@ -1,12 +1,13 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { createBrowserRouter, RouterProvider } from 'react-router-dom'
+import {InputsProvider} from './context/InputsProvider'
 import Layout from './Components/Layout'
-import './index.css'
 import DatosCliente from './Components/pages/datosCliente'
 import DireccionApartamento from './Components/pages/direccionApartamento'
 import Caracteristicas from './Components/pages/caracteristicas'
 import Resumen from './Components/pages/resumen'
+import './index.css'
 
 
 const router = createBrowserRouter([
@@ -40,6 +41,8 @@ const router = createBrowserRouter([
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    <RouterProvider router={router}/>
+    <InputsProvider>
+      <RouterProvider router={router}/>
+    </InputsProvider>
   </React.StrictMode>,
 )

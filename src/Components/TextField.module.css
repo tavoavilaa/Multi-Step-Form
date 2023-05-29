@@ -31,6 +31,12 @@
   border: 1px solid #bebebe;
 }
 
+@media (max-width: 991.98px){
+  .input{
+    max-width: 300px;
+  }
+}
+
 
 .input:focus {
   background-color: #fff;
