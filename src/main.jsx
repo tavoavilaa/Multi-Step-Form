@@ -4,9 +4,9 @@ import { createBrowserRouter, RouterProvider } from 'react-router-dom'
 import {InputsProvider} from './context/InputsProvider'
 import Layout from './Components/Layout'
 import DatosCliente from './Components/pages/DatosCliente'
-import DireccionApartamento from './Components/pages/direccionApartamento'
-import Caracteristicas from './Components/pages/caracteristicas'
-import Resumen from './Components/pages/resumen'
+import DireccionApartamento from './Components/pages/DireccionApartamento'
+import Caracteristicas from './Components/pages/Caracteristicas'
+import Resumen from './Components/pages/Resumen'
 import './index.css'
 
 
