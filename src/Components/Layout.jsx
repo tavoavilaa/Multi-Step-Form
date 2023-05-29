@@ -1,40 +1,34 @@
-import { useState } from 'react';
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 import { Outlet } from 'react-router-dom'
 import SideNav from './SideNav'
 import Modal from './Modal'
 import Stepper from 'react-stepper-horizontal';
-
+import stepsData from '../data/stepsData.json';
 import '../app.css'
 import '../index.css'
 
 const Layout = () => {
   const [currentStep, setCurrentStep] = useState(0);
+  const [datSteps, setDataSteps] = useState(stepsData);
 
+ 
 
-  const steps = [
-    { title: 'Mis datos' },
-    { title: 'Mi apartamento' },
-    { title: 'Características exteriores' },
-    { title: 'Resumen' },
-  ];
+  const steps = datSteps.map(step => ({ title: step.description }));
 
   const location = useLocation();
 
   useEffect(() => {
     const pathname = location.pathname;
-    
-    if (pathname === '/datos-cliente') {
-      setCurrentStep(0);
-    } else if (pathname === '/direccion-apartamento') {
-      setCurrentStep(1);
-    } else if (pathname === '/caracteristicas') {
-      setCurrentStep(2);
-    } else if (pathname === '/resumen') {
-      setCurrentStep(3);
-    }
+    const currentStep = stepsData.findIndex(step => step.path === pathname);
+  
+    setCurrentStep(currentStep);
   }, [location.pathname]);
+
+
+
+
+
 
 
   return (

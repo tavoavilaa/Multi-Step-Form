@@ -1,0 +1,27 @@
+[
+    {
+      "component": "Componente1",
+      "path": "/datos-cliente",
+      "order": 0,
+      "description": "Mis datos"
+    },
+    {
+      "component": "Componente2",
+      "path": "/direccion-apartamento",
+      "order": 1,
+      "description": "Mi apartamento"
+    },
+    {
+      "component": "Componente3",
+      "path": "/caracteristicas",
+      "order": 2,
+      "description": "Características exteriores"
+    },
+    {
+      "component": "Componente4",
+      "path": "/resumen",
+      "order": 3,
+      "description": "Resumen"
+    }
+  ]
+  

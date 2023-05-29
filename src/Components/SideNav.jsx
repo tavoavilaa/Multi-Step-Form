@@ -18,8 +18,8 @@ const SideNav = () => {
         <h2><b>Resumen</b></h2>
         <div className='summary'>
         {Object.entries(summaryData).map(([key, value]) => (
-          <div className='summaryContent'>
-            <h4 key={key}>
+          <div key={key} className='summaryContent'>
+            <h4 >
               <strong>{key}: </strong>
             </h4>
             <p>
